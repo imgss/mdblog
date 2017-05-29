@@ -16,6 +16,7 @@ var fs = require('fs');
 						title,
 						tags,
 						date,
+						id: '/article/'+path.split('/').pop().split('.')[0],
 						text:article.substr(0,200).replace(/\r|\n|#/g, ' ')
 					})
 				}
@@ -41,7 +42,7 @@ function walk(path){
 			   if(err){
 			   		throw (err)
 				}
-			   console.log(done)
+			   console.log('done')
 			}))
 }
 console.log(__dirname)
