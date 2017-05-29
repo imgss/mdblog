@@ -10,12 +10,12 @@ var fs = require('fs');
 			let match = re.exec(data);
 				if(match){
 					let info = match[1];
-					let [title, tags, date] = info.split('\r\n')
+					let [title, tags, postDate] = info.split('\r\n')
 					let article = match[2];
 					resolve({
 						title,
 						tags,
-						date,
+						postDate,
 						id: '/article/'+path.split('/').pop().split('.')[0],
 						text:article.substr(0,200).replace(/\r|\n|#/g, ' ')
 					})
