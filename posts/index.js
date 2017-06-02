@@ -19,31 +19,36 @@ var fs = require('fs');
 						id: '/article/'+path.split('/').pop().split('.')[0],
 						text:article.substr(0,200).replace(/\r|\n|#/g, ' ')
 					})
+				}else{
+					console.log('没有标签')
 				}
 		})
 	 })
  }
-function walk(path){
+ function walk(path){
 	let articleList = [];
 	let promiseArr = [];
 	var dirList = fs.readdirSync(path);
-	console.log(dirList)
 	dirList.forEach(function(item){
 		if(fs.statSync(path + '/' + item).isDirectory()){
 			walk(path);
 		}else{
 			if(/\.md/.test(item)){
+				console.log(item)
 				promiseArr.push(promiseFile(path + '/' + item))
 			}
 		}
 	});
 	Promise.all(promiseArr)
-		   .then(values => fs.writeFile(__dirname+'/index.json', JSON.stringify(values), (err) => {
+		   .then(values => {
+			   fs.writeFile(__dirname+'/index.json', JSON.stringify(values), (err) => {
 			   if(err){
 			   		throw (err)
 				}
 			   console.log('done')
-			}))
+			})
+		}).catch(err => {
+			throw(err);
+		})
 }
-console.log(__dirname)
 walk(__dirname);
