@@ -1,5 +1,5 @@
 ---
-title: conglazyman谈谈流程控制
+title: 从lazyman谈谈流程控制
 tags: 流程控制 js
 date: 2017-06-02 23:41
 ---
