@@ -1,4 +1,5 @@
 var fs = require('fs');
+let allTags = [];
  function promiseFile(path){
 	 return new Promise(function(resolve,reject){
 		fs.readFile(path,'utf-8',(err,data)=>{
@@ -12,6 +13,9 @@ var fs = require('fs');
 					let info = match[1];
 					let [title, tags, postDate] = info.split('\r\n')
 					let article = match[2];
+					title = title.split(':')[1].trim();
+					tags = tags.split(':')[1].trim();
+					allTags.push(tags);
 					resolve({
 						title,
 						tags,
@@ -41,7 +45,8 @@ var fs = require('fs');
 	});
 	Promise.all(promiseArr)
 		   .then(values => {
-			   fs.writeFile(__dirname+'/index.json', JSON.stringify(values), (err) => {
+			   allTags = allTags.join(' ').split(/\s+/)
+			   fs.writeFile(__dirname+'/index.json', JSON.stringify({values,allTags}), (err) => {
 			   if(err){
 			   		throw (err)
 				}
