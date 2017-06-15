@@ -10,7 +10,7 @@ date: 2017-6-15 21:07:13
 
 ## 基础用法
 
-- str.replace(substr, newsubStr);将字符串的一个子字符串，替换为另一个新的子字符串。比如:
+str.replace(substr, newsubStr);将字符串的一个子字符串，替换为另一个新的子字符串。比如:
 
 ```js
 'eabcabcabcabc'.replace('ab','df')//返回'edfcabcabcabc',只替换第一个子串
@@ -44,7 +44,7 @@ MDN描述如下:
 'abcdefg'.replace(/(ab)c(de)/g,'$&O')//abcdeofg,这里$&代表abcde
 'abcdefg'.replace(/\S{3}/g,'$&O')//abcOdefOg,这里$&代表abc和def
 ```
-### 带函数的用法
+## 带函数的用法
 这里就是将函数作为replace方法的第二个参数了，可以看作是上面的函数版和加强版
 
 ```js
