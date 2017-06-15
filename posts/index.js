@@ -7,12 +7,15 @@ let allTags = [];
 				reject();
 				throw err;
 			}
-			let re = /---\r\n([\s\S]+)\r\n---([\s\S]+)/gm;
+			data = data.replace(/\r/g,'');
+			let re = /---\n([\s\S]+)\n---([\s\S]+)/gm;
 			let match = re.exec(data);
 				if(match){
 					let info = match[1];
-					let [title, tags, postDate] = info.split('\r\n')
+					let [title, tags, postDate] = info.split(/\n/)
 					let article = match[2];
+					console.log(title)
+					try{
 					title = title.split(':')[1].trim();
 					tags = tags.split(':')[1].trim();
 					allTags.push(tags);
@@ -23,8 +26,15 @@ let allTags = [];
 						id: '/article/'+path.split('/').pop().split('.')[0],
 						text:article.substr(0,200).replace(/\r|\n|#/g, ' ')
 					})
+					}catch(err){
+						console.log('err',info)
+						let [ti, tag, po] = info.split(/\n/);
+						console.log(ti,'|', tag,'|', po)
+						console.log(ti.split(':'))
+					}
 				}else{
-					console.log('没有标签')
+					resolve();
+					console.log(path,'没有标签')
 				}
 		})
 	 })
@@ -46,7 +56,7 @@ let allTags = [];
 	Promise.all(promiseArr)
 		   .then(values => {
 			   allTags = allTags.join(' ').split(/\s+/)
-			   fs.writeFile(__dirname+'/index.json', JSON.stringify({values,allTags}), (err) => {
+			   fs.writeFile(__dirname+'/index.json', JSON.stringify({values,allTags},null,2), (err) => {
 			   if(err){
 			   		throw (err)
 				}
