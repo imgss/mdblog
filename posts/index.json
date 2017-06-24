@@ -16,17 +16,24 @@
     },
     {
       "title": "浏览器是怎么渲染页面的",
-      "tags": "浏览器原理",
+      "tags": "性能",
       "postDate": "date: 2017-05-22 22:01",
       "id": "/article/3",
       "text": "    浏览器前端优化  > 本文转载自：[众成翻译](http://www.zcfy.cc) > 译者：[网络埋伏纪事](http://www.zcfy.cc/@bigshaw) > 链接：[http://www.zcfy.cc/article/2847](http://www.zcfy.cc/article/2847) > 原文：[https://hackernoon.com/optimisi"
     },
     {
+      "title": "vue实现3D标签云",
+      "tags": "vue svg",
+      "postDate": "date: 2017-6-24 20:43:29",
+      "id": "/article/3Dsvg",
+      "text": "    闲扯两句  最近想给自己的博客上加上一个3D标签云的效果，用来表示自己博客文章的分组，网上找到了[canvas](https://github.com/goat1000/TagCanvas)实现的，还有a元素实现的[解析3D标签云](http://www.cnblogs.com/axes/p/3501424.html)，我想让标签可以选择和点击，又不想在标签数量较多时操作a标签导致性能问题"
+    },
+    {
       "title": "重新认识string.prototype.replace",
-      "tags": "js 内置方法",
+      "tags": "js api",
       "postDate": "date: 2017-6-15 21:07:13",
       "id": "/article/replace",
-      "text": " 字符串的replace方法是操作字符串的常用方法之一，但这个方法只有当与正则合并使用时，才能体现出它的强大之处。  > 语法：`str.replace(regexp|substr, newsubStr|function)`;     <br>返回值： 一个部分或全部匹配由替代模式所取代的新的字符串，因为字符串是不可变的原始类型。     基础用法  - str.replace(substr, n"
+      "text": " 字符串的replace方法是操作字符串的常用方法之一，但这个方法只有当与正则合并使用时，才能体现出它的强大之处。  > 语法：`str.replace(regexp|substr, newsubStr|function)`;     <br>返回值： 一个部分或全部匹配由替代模式所取代的新的字符串，因为字符串是不可变的原始类型。     基础用法  str.replace(substr, new"
     },
     {
       "title": "从lazyman谈谈流程控制",
@@ -37,12 +44,13 @@
     }
   ],
   "allTags": [
-    "电影",
     "idea",
+    "电影",
     "流程控制",
     "js",
-    "js",
-    "内置方法",
-    "浏览器原理"
+    "api",
+    "vue",
+    "svg",
+    "性能"
   ]
 }

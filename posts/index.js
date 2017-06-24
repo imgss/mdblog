@@ -29,8 +29,6 @@ let allTags = [];
 					}catch(err){
 						console.log('err',info)
 						let [ti, tag, po] = info.split(/\n/);
-						console.log(ti,'|', tag,'|', po)
-						console.log(ti.split(':'))
 					}
 				}else{
 					resolve();
@@ -55,7 +53,7 @@ let allTags = [];
 	});
 	Promise.all(promiseArr)
 		   .then(values => {
-			   allTags = allTags.join(' ').split(/\s+/)
+			   allTags = [...new Set(allTags.join(' ').split(/\s+/))]
 			   fs.writeFile(__dirname+'/index.json', JSON.stringify({values,allTags},null,2), (err) => {
 			   if(err){
 			   		throw (err)
