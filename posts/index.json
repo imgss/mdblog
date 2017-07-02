@@ -41,16 +41,24 @@
       "postDate": "date: 2017-06-02 23:41",
       "id": "/article/从lazyman到js流程控制",
       "text": " > 参考文章:http://web.jobbole.com/89626/     一道面试题 ``` 实现一个LazyMan，可以按照以下方式调用: LazyMan(“Hank”)输出: Hi! This is Hank!  LazyMan(“Hank”).sleep(10).eat(“dinner”)输出 Hi! This is Hank! //等待10秒.. Wake up after 10"
+    },
+    {
+      "title": "绕不过去的正则",
+      "tags": "js re",
+      "postDate": "date: 2017-7-2 09:48:39",
+      "id": "/article/绕不过去的正则",
+      "text": "     正则的属性  正则怪异的写法，常常让人望而却步，但是只要我们要处理`string`,正则便绕不过去。所以这里系统整理一下，权当笔记。  懒的不想写，一定补上      RegExp原型上的方法      RegExp构造函数上的奇葩属性      正则表达式的flag      正则表达式的样式分类       量词和greedy       取其中之一       捕获靠--()   "
     }
   ],
   "allTags": [
     "idea",
-    "电影",
-    "流程控制",
-    "js",
-    "api",
     "vue",
     "svg",
-    "性能"
+    "流程控制",
+    "js",
+    "电影",
+    "性能",
+    "api",
+    "re"
   ]
 }
