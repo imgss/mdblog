@@ -2,7 +2,7 @@ var fs = require('fs');
 let allTags = [];
  function promiseFile(path){
 	 return new Promise(function(resolve,reject){
-		fs.readFile(path,'utf-8',(err,data)=>{
+		fs.readFile(path,'utf-8',(err,data) => {
 			if(err){
 				reject();
 				throw err;
@@ -23,8 +23,8 @@ let allTags = [];
 						title,
 						tags,
 						postDate,
-						id: '/article/'+path.split('/').pop().split('.')[0],
-						text:article.substr(0,200).replace(/\r|\n|#/g, ' ')
+						id: '/article/' + path.split('/').pop().split('.')[0],
+						text: article.substr(0, 200).replace(/\r|\n|#/g, '').replace(title, '')
 					})
 					}catch(err){
 						console.log('err',info)
