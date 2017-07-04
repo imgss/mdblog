@@ -17,7 +17,8 @@ let allTags = [];
 					console.log(title)
 					try{
 					title = title.split(':')[1].trim();
-					tags = tags.split(':')[1].trim();
+					tags = tags.split(':')[1].trim();	
+					postDate = postDate.replace(/date\s?:\s+/, '')	
 					allTags.push(tags);
 					resolve({
 						title,

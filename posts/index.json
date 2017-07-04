@@ -10,55 +10,55 @@
     {
       "title": "写在520",
       "tags": "电影",
-      "postDate": "date: 2017-05-20 20:51:53",
+      "postDate": "2017-05-20 20:51:53",
       "id": "/article/2",
       "text": " 夏日光年写影评去豆瓣啊，在这里写干嘛？？，好的，打扰了，excuse me..拜拜~， 顺便测试~~删除线好不好用~~"
     },
     {
       "title": "浏览器是怎么渲染页面的",
       "tags": "性能",
-      "postDate": "date: 2017-05-22 22:01",
+      "postDate": "2017-05-22 22:01",
       "id": "/article/3",
       "text": " 浏览器前端优化> 本文转载自：[众成翻译](http://www.zcfy.cc)> 译者：[网络埋伏纪事](http://www.zcfy.cc/@bigshaw)> 链接：[http://www.zcfy.cc/article/2847](http://www.zcfy.cc/article/2847)> 原文：[https://hackernoon.com/optimisi"
     },
     {
       "title": "vue实现3D标签云",
       "tags": "vue svg",
-      "postDate": "date: 2017-6-24 20:43:29",
+      "postDate": "2017-6-24 20:43:29",
       "id": "/article/3Dsvg",
       "text": " 闲扯两句最近想给自己的博客上加上一个3D标签云的效果，用来表示自己博客文章的分组，网上找到了[canvas](https://github.com/goat1000/TagCanvas)实现的，还有a元素实现的[解析3D标签云](http://www.cnblogs.com/axes/p/3501424.html)，我想让标签可以选择和点击，又不想在标签数量较多时操作a标签导致性能问题"
     },
     {
       "title": "重新认识string.prototype.replace",
       "tags": "js api",
-      "postDate": "date: 2017-6-15 21:07:13",
+      "postDate": "2017-6-15 21:07:13",
       "id": "/article/replace",
       "text": "字符串的replace方法是操作字符串的常用方法之一，但这个方法只有当与正则合并使用时，才能体现出它的强大之处。> 语法：`str.replace(regexp|substr, newsubStr|function)`;    <br>返回值： 一个部分或全部匹配由替代模式所取代的新的字符串，因为字符串是不可变的原始类型。 基础用法str.replace(substr, new"
     },
     {
       "title": "从lazyman谈谈流程控制",
       "tags": "流程控制 js",
-      "postDate": "date: 2017-06-02 23:41",
+      "postDate": "2017-06-02 23:41",
       "id": "/article/从lazyman到js流程控制",
       "text": "> 参考文章:http://web.jobbole.com/89626/ 一道面试题```实现一个LazyMan，可以按照以下方式调用:LazyMan(“Hank”)输出:Hi! This is Hank!LazyMan(“Hank”).sleep(10).eat(“dinner”)输出Hi! This is Hank!//等待10秒..Wake up after 10"
     },
     {
       "title": "绕不过去的正则",
       "tags": "js re",
-      "postDate": "date: 2017-7-2 09:48:39",
+      "postDate": "2017-7-2 09:48:39",
       "id": "/article/绕不过去的正则",
       "text": " 正则的属性正则怪异的写法，常常让人望而却步，但是只要我们要处理`string`,正则便绕不过去。所以这里系统整理一下，权当笔记。懒的不想写，一定补上 正则表达式语法有两种方式得到一个正则表达式实例，调用构造函数,或者字面量写法,得到的是一个正则表达式的对象。```jsvar a = /a/i;var b = new RegExp('b','i');```"
     }
   ],
   "allTags": [
     "idea",
+    "性能",
     "电影",
+    "js",
+    "api",
     "vue",
     "svg",
-    "js",
-    "re",
-    "api",
-    "性能",
-    "流程控制"
+    "流程控制",
+    "re"
   ]
 }
