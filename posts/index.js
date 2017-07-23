@@ -55,6 +55,7 @@ let allTags = [];
 	Promise.all(promiseArr)
 		   .then(values => {
 			   allTags = [...new Set(allTags.join(' ').split(/\s+/))]
+				 values.sort((a,b) => new Date(b.postDate) - new Date(a.postDate))//按日期降序排列
 			   fs.writeFile(__dirname+'/index.json', JSON.stringify({values,allTags},null,2), (err) => {
 			   if(err){
 			   		throw (err)

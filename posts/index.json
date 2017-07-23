@@ -1,25 +1,25 @@
 {
   "values": [
     {
-      "title": "一个想法",
-      "tags": "idea",
-      "postDate": "date:2017-3-26",
-      "id": "/article/1",
-      "text": " 在写blog的时候，我用hexo，并部署在github子路径下。我每次写完要更新的时候，需要`hexo g`,然后将静态文件目录替换之前的所有文件，感觉比较麻烦。才有了这个想法。"
+      "title": "认真学习customEvent",
+      "tags": "DOM",
+      "postDate": "2017-7-22 23:20:57",
+      "id": "/article/customEvent",
+      "text": ""
     },
     {
-      "title": "写在520",
-      "tags": "电影",
-      "postDate": "2017-05-20 20:51:53",
-      "id": "/article/2",
-      "text": " 夏日光年写影评去豆瓣啊，在这里写干嘛？？，好的，打扰了，excuse me..拜拜~， 顺便测试~~删除线好不好用~~"
+      "title": "绕不过去的正则之样式篇",
+      "tags": "re",
+      "postDate": "2017-7-7 17:25:13",
+      "id": "/article/绕不过去的正则之样式篇",
+      "text": "> 7-20过来填坑 正则中的量词正则中的量词主要有 `?`, `+`, `*`, `{}` 。用来表示对量词前面的表达式进行重复.* _?_ 表示字符串中有0个或一个前面的元素  ```js    /a?/.test('b') //true    /a?/.test('a') //true    /a?/.test('aa') //true    /a(bc)?/.t"
     },
     {
-      "title": "浏览器是怎么渲染页面的",
-      "tags": "性能",
-      "postDate": "2017-05-22 22:01",
-      "id": "/article/3",
-      "text": " 浏览器前端优化> 本文转载自：[众成翻译](http://www.zcfy.cc)> 译者：[网络埋伏纪事](http://www.zcfy.cc/@bigshaw)> 链接：[http://www.zcfy.cc/article/2847](http://www.zcfy.cc/article/2847)> 原文：[https://hackernoon.com/optimisi"
+      "title": "绕不过去的正则",
+      "tags": "js re",
+      "postDate": "2017-7-2 09:48:39",
+      "id": "/article/绕不过去的正则",
+      "text": " 正则的属性正则怪异的写法，常常让人望而却步，但是只要我们要处理`string`,正则便绕不过去。所以这里系统整理一下，权当笔记。懒的不想写，一定补上 正则表达式语法有两种方式得到一个正则表达式实例，调用构造函数,或者字面量写法,得到的是一个正则表达式的对象。```jsvar a = /a/i;var b = new RegExp('b','i');```"
     },
     {
       "title": "vue实现3D标签云",
@@ -43,29 +43,37 @@
       "text": "> 参考文章:http://web.jobbole.com/89626/ 一道面试题```实现一个LazyMan，可以按照以下方式调用:LazyMan(“Hank”)输出:Hi! This is Hank!LazyMan(“Hank”).sleep(10).eat(“dinner”)输出Hi! This is Hank!//等待10秒..Wake up after 10"
     },
     {
-      "title": "绕不过去的正则",
-      "tags": "js re",
-      "postDate": "2017-7-2 09:48:39",
-      "id": "/article/绕不过去的正则",
-      "text": " 正则的属性正则怪异的写法，常常让人望而却步，但是只要我们要处理`string`,正则便绕不过去。所以这里系统整理一下，权当笔记。懒的不想写，一定补上 正则表达式语法有两种方式得到一个正则表达式实例，调用构造函数,或者字面量写法,得到的是一个正则表达式的对象。```jsvar a = /a/i;var b = new RegExp('b','i');```"
+      "title": "浏览器是怎么渲染页面的",
+      "tags": "性能",
+      "postDate": "2017-05-22 22:01",
+      "id": "/article/3",
+      "text": " 浏览器前端优化> 本文转载自：[众成翻译](http://www.zcfy.cc)> 译者：[网络埋伏纪事](http://www.zcfy.cc/@bigshaw)> 链接：[http://www.zcfy.cc/article/2847](http://www.zcfy.cc/article/2847)> 原文：[https://hackernoon.com/optimisi"
     },
     {
-      "title": "绕不过去的正则之样式篇",
-      "tags": "re",
-      "postDate": "2017-7-7 17:25:13",
-      "id": "/article/绕不过去的正则之样式篇",
-      "text": "> 7-20过来填坑 正则中的量词正则中的量词主要有 `?`, `+`, `*`, `{}` 。用来表示对量词前面的表达式进行重复.* _?_ 表示字符串中有0个或一个前面的元素  ```js    /a?/.test('b') //true    /a?/.test('a') //true    /a?/.test('aa') //true    /a(bc)?/.t"
+      "title": "写在520",
+      "tags": "电影",
+      "postDate": "2017-05-20 20:51:53",
+      "id": "/article/2",
+      "text": " 夏日光年写影评去豆瓣啊，在这里写干嘛？？，好的，打扰了，excuse me..拜拜~， 顺便测试~~删除线好不好用~~"
+    },
+    {
+      "title": "一个想法",
+      "tags": "idea",
+      "postDate": "date:2017-3-26",
+      "id": "/article/1",
+      "text": " 在写blog的时候，我用hexo，并部署在github子路径下。我每次写完要更新的时候，需要`hexo g`,然后将静态文件目录替换之前的所有文件，感觉比较麻烦。才有了这个想法。"
     }
   ],
   "allTags": [
     "idea",
     "电影",
+    "流程控制",
+    "js",
+    "性能",
+    "api",
+    "DOM",
     "re",
     "vue",
-    "svg",
-    "性能",
-    "js",
-    "流程控制",
-    "api"
+    "svg"
   ]
 }
