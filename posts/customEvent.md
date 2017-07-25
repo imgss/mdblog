@@ -51,5 +51,6 @@ date: 2017-7-22 23:20:57
 
 
 ```
-
+<p data-height="300" data-theme-id="27057" data-slug-hash="NvPjde" data-default-tab="js,result" data-user="imgss" data-embed-version="2" data-pen-title="NvPjde" class="codepen">See the Pen <a href="https://codepen.io/imgss/pen/NvPjde/">NvPjde</a> by imgss (<a href="https://codepen.io/imgss">@imgss</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 当选项被点击时触发`select`事件，根元素监听到`select`事件之后显示出被选中的选项。有同学会说，这个直接用点击事件不就可以了吗，但是这样写逻辑更清楚
