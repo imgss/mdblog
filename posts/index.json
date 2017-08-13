@@ -1,6 +1,13 @@
 {
   "values": [
     {
+      "title": "写一个vue loading 插件",
+      "tags": "vue",
+      "postDate": "2017-8-13 16:05:41",
+      "id": "/article/vue_plugin",
+      "text": " 什么是vue插件?- 从功能上说，插件是为Vue添加全局功能的一种机制，比如给Vue添加一个全局组件，全局指令等；- 从代码结构上说，插件就是一个必须拥有`install`方法的对象,这个方法的接收的第一个参数是Vue构造函数，还可以接收一个可选的参数，用于配置插件：```jsvar myplugin = {  install:function(Vue, options){"
+    },
+    {
       "title": "认真学习customEvent",
       "tags": "DOM",
       "postDate": "2017-7-22 23:20:57",
@@ -67,13 +74,13 @@
   "allTags": [
     "idea",
     "电影",
-    "DOM",
-    "js",
-    "api",
-    "性能",
     "vue",
     "svg",
-    "流程控制",
-    "re"
+    "DOM",
+    "js",
+    "re",
+    "性能",
+    "api",
+    "流程控制"
   ]
 }
