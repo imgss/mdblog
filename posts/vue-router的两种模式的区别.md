@@ -1,6 +1,6 @@
 
 ---
-title: vue-router的两种模式的区别.md
+title: vue-router的两种模式的区别
 tags: vue
 date: 2017-9-7 20:44:51
 ---
@@ -9,7 +9,7 @@ date: 2017-9-7 20:44:51
 ### hash模式
 
 hash模式背后的原理是`onhashchange`事件,可以在`window`对象上监听这个事件:
-``` js
+```js
 window.onhashchange = function(event){
 
     console.log(event.oldURL, event.newURL);
@@ -19,7 +19,9 @@ window.onhashchange = function(event){
 }
 
 ```
-上面的代码可以通过改变hash来改变页面字体颜色，虽然没什么用，但是一定程度上说明了原理，更关键的一点是这些因为hash发生变化的url都会被浏览器记录下来，从而你会发现浏览器的前进后退都可以用了，同时点击后退时，页面字体颜色也会发生变化。这样一来，尽管浏览器没有请求服务器，但是页面状态和url一一关联起来，人们给它起了一个霸气的名字叫前端路由，成为了单页应用标配。
+上面的代码可以通过改变hash来改变页面字体颜色，虽然没什么用，但是一定程度上说明了原理。
+
+更关键的一点是,因为hash发生变化的url都会被浏览器记录下来，从而你会发现浏览器的前进后退都可以用了，同时点击后退时，页面字体颜色也会发生变化。这样一来，尽管浏览器没有请求服务器，但是页面状态和url一一关联起来，后来人们给它起了一个霸气的名字叫前端路由，成为了单页应用标配。
 
 ![](http://images2017.cnblogs.com/blog/1016471/201709/1016471-20170907211959179-793927527.gif)
 
@@ -36,12 +38,15 @@ https://pan.baidu.com/disk/home#list/vmode=list
 history api可以分为两大部分，切换和修改，[参考MDN](https://developer.mozilla.org/en-US/docs/Web/API/History_API)
 
 #### 切换历史状态
-包括`back`,`forward`,`go`三个方法，对应浏览器的前进，后退，跳转操作，有同学说了，(谷歌)浏览器只有前进和后退，没有跳转，嗯，在前进后退上长按鼠标，会出来所有当前窗口的历史记录，从而可以跳转(也许叫跳更合适)：
+包括`back`,`forward`,`go`三个方法，对应浏览器的前进，后退，跳转操作。有同学说了，(谷歌)浏览器只有前进和后退，没有跳转，嗯，在前进后退上长按鼠标，会出来所有当前窗口的历史记录，从而可以跳转(也许叫跳更合适)：
 
-``` js
+```js
 history.go(-2);//后退两次
+
 history.go(2);//前进两次
+
 history.back(); //后退
+
 hsitory.forward(); //前进
 
 ```
@@ -53,9 +58,13 @@ hsitory.forward(); //前进
 history.pushState({color:'red'}, 'red', 'red'})
 
 window.onpopstate = function(event){
+
     console.log(event.state)
+
     if(event.state && event.state.color === 'red'){
+
         document.body.style.color = 'red';
+        
     }
 }
 
