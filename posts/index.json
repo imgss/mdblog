@@ -1,6 +1,13 @@
 {
   "values": [
     {
+      "title": "vue-router的两种模式的区别",
+      "tags": "vue",
+      "postDate": "2017-9-7 20:44:51",
+      "id": "/article/vue-router的两种模式的区别",
+      "text": "众所周知，vue-router有两种模式，hash模式和history模式，这里来谈谈两者的区别。 hash模式hash模式背后的原理是`onhashchange`事件,可以在`window`对象上监听这个事件:``` jswindow.onhashchange = function(event){    console.log(event.oldURL, event.ne"
+    },
+    {
       "title": "[undefined,1] 和 [,1]的区别在哪里--认识js中的稀疏数组",
       "tags": "js",
       "postDate": "2017-8-21 22:47:19",
@@ -81,13 +88,13 @@
   "allTags": [
     "idea",
     "电影",
-    "js",
-    "api",
     "vue",
     "svg",
+    "js",
+    "api",
+    "DOM",
     "性能",
-    "re",
     "流程控制",
-    "DOM"
+    "re"
   ]
 }
