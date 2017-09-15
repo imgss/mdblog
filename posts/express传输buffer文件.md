@@ -48,7 +48,7 @@ app.get('/',function(req, res){
 app.listen(3000);
 
 ```
-这个demo将一个txt文件buffer以xlsx的格式发出去。用浏览器访问localhost:3000就可以看到效果了。】
+这个demo将一个txt文件buffer以xlsx的格式发出去。用浏览器访问localhost:3000就可以看到效果了。
 
 完
 

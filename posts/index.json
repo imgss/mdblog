@@ -1,11 +1,18 @@
 {
   "values": [
     {
+      "title": "express传输buffer文件",
+      "tags": "node",
+      "postDate": "2017-9-15 21:51:01",
+      "id": "/article/express传输buffer文件",
+      "text": "最近要做一个功能，导出动态生成的excel文件，这个普普通通的功能却让我折腾了半天。大致流程是这样的，将数据结合excel模板通过ejsExcel库，动态生成excel文件，并发送到客户端。在express中有两个方法:res.sendFile()和res.download()都是用来发送文件的，但是这两个方法却只接收一个路径，不接收buffer。然而ejsExcel库返回的就是一个buf"
+    },
+    {
       "title": "vue-router的两种模式的区别",
       "tags": "vue",
       "postDate": "2017-9-7 20:44:51",
       "id": "/article/vue-router的两种模式的区别",
-      "text": "众所周知，vue-router有两种模式，hash模式和history模式，这里来谈谈两者的区别。 hash模式hash模式背后的原理是`onhashchange`事件,可以在`window`对象上监听这个事件:``` jswindow.onhashchange = function(event){    console.log(event.oldURL, event.ne"
+      "text": "众所周知，vue-router有两种模式，hash模式和history模式，这里来谈谈两者的区别。 hash模式hash模式背后的原理是`onhashchange`事件,可以在`window`对象上监听这个事件:```jswindow.onhashchange = function(event){    console.log(event.oldURL, event.new"
     },
     {
       "title": "[undefined,1] 和 [,1]的区别在哪里--认识js中的稀疏数组",
@@ -88,13 +95,14 @@
   "allTags": [
     "idea",
     "电影",
+    "node",
+    "DOM",
     "vue",
     "svg",
     "js",
     "api",
-    "DOM",
     "性能",
-    "流程控制",
-    "re"
+    "re",
+    "流程控制"
   ]
 }
