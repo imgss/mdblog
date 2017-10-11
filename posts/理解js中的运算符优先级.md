@@ -7,13 +7,48 @@ date: 2017-10-10 22:12:31
 
 ## 前言
 
-我是有过这样的经历，获取年月日是写出这样的代码 `new Date().getFullYear()`,此时的我是心虚的，因为我不知道是先执行`.`运算还是`new`运算，于是赶紧贴到控制台里，哎呦😀，没报错，看来是先执行`new`了。
+我是有过这样的经历，获取年月日时写出这样的代码 `new Date().getFullYear()`,此时的我是心虚的，因为我不知道是先执行`.`运算还是`new`运算，于是赶紧贴到控制台里，哎呦😀，没报错，看来是先执行`new`了。
 
-让牛逼的代码再短一点，把Date后面的()去掉！得到`new Date.getFullYear()`结果这回浏览器告诉你此路不通。
+让牛逼的代码再短一点，把Date后面的()去掉！🤔变成这样`new Date.getFullYear()`。结果这回浏览器说此路不通。
+
+或者看到这样的眼花缭乱的黑魔法代码
+```
+[[[] == []] + []][+![]][+![]] //'f'
+```
+
+这就说明该打打怪，学学优先级了
+
+### 表达式
+
+参考MDN==_运算符的优先级决定了表达式中运算执行的先后顺序_可以看出,优先级这个概念是针对表达式的执行而产生的。所以要谈优先级，先说什么是表达式。参考链接5给出一个不严谨的定义，但我觉得很合我的胃口：
+
+> 一个表达式会产生一个值,它可以放在任何需要一个值的地方
+
+根据这个定义，，我们可以这样来验证一段代码是不是表达式，就是让把这段代码赋值给一个变量(不严谨了^^)，如果不报错，那就是一个表达式了:举个例子：
+```js
+3 //a=3 ok，所以a是一个表达式
+new Date //a=new Date 也是一个表达式
+a=3 //a=a=3 所以a=3也是一个表达式
+a>2 ? new Date : function(){} //可以赋值，也是表达式
+function(){} //a=function(){} ok
+a //a=a报错，然而a是一个表达式。。。，JS中的原始表达式：常量或者直接量、关键字和变量（参考链接4）
+```
+链接4总结了以下的表达式种类：
+- 原始表达式：常量或者直接量、关键字和变量
+- 字面量表达式
+- 函数定义表达式
+- 属性访问表达式
+- 调用表达式
+- 对象创建表达式
+
+### 优先级、结合性、求值顺序 
+
+
 ### 参考链接
 
-[JavaScript中运算符优先级的问题？](https://www.zhihu.com/question/52116922)
-[虚拟机随谈（一）：解释器，树遍历解释器，基于栈与基于寄存器，大杂烩](http://rednaxelafx.iteye.com/blog/492667)
-[运算符优先级](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
-
+1. [JavaScript中运算符优先级的问题？](https://www.zhihu.com/question/52116922)
+1. [虚拟机随谈（一）：解释器，树遍历解释器，基于栈与基于寄存器，大杂烩](http://rednaxelafx.iteye.com/blog/492667)
+1. [运算符优先级](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+1. [你能过我8关js运算符的题目吗？](http://www.cnblogs.com/Fresh-Air/archive/2013/03/24/2976278.html)
+1. [JavaScript中:表达式和语句的区别](http://www.cnblogs.com/ziyunfei/archive/2012/09/16/2687589.html)
 
