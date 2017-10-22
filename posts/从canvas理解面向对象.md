@@ -1,5 +1,5 @@
 ---
-title: 从canvas理解面向对象.md
+title: 从canvas理解面向对象
 tags: canvas
 date: 2017-10-22 18:24:36
 ---
