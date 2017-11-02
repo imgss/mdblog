@@ -24,7 +24,7 @@ let allTags = [];
 						title,
 						tags,
 						postDate,
-						id: '/article/' + path.split('/').pop().split('.')[0],
+						id: '/article/' + path.split('/').pop().replace('.md',''),
 						text: article.substr(0, 200).replace(/\r|\n|#/g, '').replace(title, '')
 					})
 					}catch(err){
