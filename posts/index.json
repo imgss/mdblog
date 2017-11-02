@@ -1,10 +1,17 @@
 {
   "values": [
     {
+      "title": "Vue.js之render函数基础",
+      "tags": "vue",
+      "postDate": "2017-11-1 20:04:46",
+      "id": "/article/Vue",
+      "text": "刚才翻了一下博客，才发现，距离自己写的第一篇Vue的博客[vue.js之绑定class和style](http://www.cnblogs.com/imgss/p/6013663.html)(2016-10-30)已经过去一年零两天。这一年里，自己从船厂的普通技术员，成为了一个微型不靠谱创业公司的普通码农。发过一次烧，搬了两次家，没攒下什么钱。好，牢骚发到这里，接下来谈谈传说中接近Vue底层的a"
+    },
+    {
       "title": "canvas+gif.js打造自己的数字雨头像",
       "tags": "canvas",
       "postDate": "2017-10-24 22:50:30",
-      "id": "/article/canvas+gif.js打造自己的数字雨头像",
+      "id": "/article/canvas+gif",
       "text": " 前言今天是1024程序员节，不知道各位看官过的怎么样,节日快乐啊。既然是过节，就要有个过节的样子，比方说，换个头像😀，嗯，大家看我的头像~~牛逼不~~，这就是今天的主题了--一个数字雨动图生成的页面，上传一个静态头像，就能得到一个动态的数字雨头像。请看demo[传送门](https://imgss.github.io/demo/gif/) 使用说明1. 传一个你喜欢的头"
     },
     {
@@ -115,14 +122,14 @@
   ],
   "allTags": [
     "idea",
-    "电影",
-    "canvas",
+    "DOM",
     "vue",
     "svg",
-    "DOM",
+    "canvas",
     "js",
     "api",
     "性能",
+    "电影",
     "流程控制",
     "node",
     "re"
