@@ -1,6 +1,20 @@
 {
   "values": [
     {
+      "title": "gulp管理静态资源缓存.md",
+      "tags": "gulp",
+      "postDate": "2017-12-21 19:09:27",
+      "id": "/article/gulp管理静态资源缓存",
+      "text": "前端项目在版本迭代的时候，难免会遇到静态缓存的问题，明明开发的是ok的,但是一部署到服务器上，发现页面变得乱七八糟，这是由于静态缓存引起的。![](http://images2017.cnblogs.com/blog/1016471/201712/1016471-20171221191311646-565844603.png)从上面这张图片可以看出，浏览器加载css,js等资源时，siz"
+    },
+    {
+      "title": "new.md",
+      "tags": "",
+      "postDate": "2017-12-12 11:00:40",
+      "id": "/article/vue路由和过渡",
+      "text": ""
+    },
+    {
       "title": "Vue.js之render函数基础",
       "tags": "vue",
       "postDate": "2017-11-1 20:04:46",
@@ -123,15 +137,16 @@
   "allTags": [
     "idea",
     "电影",
+    "性能",
     "vue",
     "svg",
+    "gulp",
     "canvas",
-    "DOM",
-    "node",
-    "性能",
-    "流程控制",
     "js",
     "api",
+    "DOM",
+    "流程控制",
+    "node",
     "re"
   ]
 }
