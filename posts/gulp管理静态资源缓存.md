@@ -58,8 +58,15 @@ gulp.task('rename',function(){
   var Path = require('path');
   gulp.src("static/css/*.css")
   .pipe(rename(function (path) {
-    path.basename  = json[path.basename + '.css'].replace('.css', '');
+    path.basename  = json[path.basename + '.css'].replace('.css', '');//改掉css文件名为含有hash值的文件名
   }))
   .pipe(gulp.dest("./dist"));
 })
 ```
+### 查询参数管理缓存
+
+这种方法适用于不生成build文件的项目，这时再去重命名静态文件就会显得很麻烦。所以出现了这种做法，就是在静态资源发生变化时，文件名不改变，但是html中请求路径的查询参数会发生变化,像下面这样:
+```html
+<link rel="stylesheet" href="/css/style.css?v=2h3h2ar">
+```
+这个查询参数v对于后台来说，没有什么意义，你完全可以改成a,b,c。但是当查询参数的hash值发生变化时，却会让浏览器去请求。从而更新缓存。
