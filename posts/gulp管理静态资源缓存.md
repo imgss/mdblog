@@ -1,6 +1,6 @@
 
 ---
-title: gulp管理静态资源缓存.md
+title: gulp管理静态资源缓存
 tags: gulp
 date: 2017-12-21 19:09:27
 ---
@@ -69,4 +69,34 @@ gulp.task('rename',function(){
 ```html
 <link rel="stylesheet" href="/css/style.css?v=2h3h2ar">
 ```
-这个查询参数v对于后台来说，没有什么意义，你完全可以改成a,b,c。但是当查询参数的hash值发生变化时，却会让浏览器去请求。从而更新缓存。
+这个查询参数v对于后台来说，没有什么意义，你完全可以改成a,b,c。但是当查询参数的hash值发生变化时，却会让浏览器去请求，从而更新缓存。如果你想用这种方式，可以使用**gulp-rev-query**（[github](https://github.com/hingsir/gulp-rev-query)）插件和**[gulp-rev-collector-query](https://github.com/hingsir/gulp-rev-collector-query)**，将文件名转换成查询字符串。(**插件的一个bug是对于.min.css会解析错误**)
+```json
+{
+  "base/index.css": "base/index.css?v=1ead88a42c"
+}
+```
+下面是我参考作者的写的一个，解决了min.js的问题，其实就是改了正则:
+
+```js
+
+var through = require('through2');
+
+module.exports = function(ver) {
+    var ver = ver || 'v'
+    // convert a-xxxxxxxx.css to a.css?ver=xxxxxxxx
+    function hashToQuery(file) {
+        var content = new String(file._contents);
+        content = content.replace(/(.+)\-(.{7,10})(\..+)"/g, function(match, p1,p2,p3,offset,string){
+            return  `${p1}${p3}?${ver}=${p2}"`
+          });
+        file._contents = new Buffer(content);
+        file.ver = ver;
+        return file;
+    }
+    return through.obj(function(file, encoding, callback) {
+        callback(null, hashToQuery(file));
+    });
+};
+```
+
+最后，祝大家圣诞快乐！
