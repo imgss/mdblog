@@ -1,18 +1,18 @@
 {
   "values": [
     {
-      "title": "gulp管理静态资源缓存.md",
+      "title": "如何用css写打印样式",
+      "tags": "css",
+      "postDate": "2018-1-7 22:08:05",
+      "id": "/article/如何用css写打印样式",
+      "text": " 打印样式打印样式就是针对网页被打印时设置给文档的样式，由于打印时是显示在纸上，跟屏幕还是有区别的，对于有打印需求的网页往往需要设置专门的打印样式来适配页面。 @media print声明自己是打印样式有两种方法：在css文件中可以使用@media print,在html文件的style标签中写上media=print属性:```html<style media="
+    },
+    {
+      "title": "gulp管理静态资源缓存",
       "tags": "gulp",
       "postDate": "2017-12-21 19:09:27",
       "id": "/article/gulp管理静态资源缓存",
       "text": "前端项目在版本迭代的时候，难免会遇到静态缓存的问题，明明开发的是ok的,但是一部署到服务器上，发现页面变得乱七八糟，这是由于静态缓存引起的。![](http://images2017.cnblogs.com/blog/1016471/201712/1016471-20171221191311646-565844603.png)从上面这张图片可以看出，浏览器加载css,js等资源时，siz"
-    },
-    {
-      "title": "new.md",
-      "tags": "",
-      "postDate": "2017-12-12 11:00:40",
-      "id": "/article/vue路由和过渡",
-      "text": ""
     },
     {
       "title": "Vue.js之render函数基础",
@@ -138,15 +138,16 @@
     "idea",
     "电影",
     "性能",
+    "DOM",
+    "gulp",
     "vue",
     "svg",
-    "gulp",
     "canvas",
     "js",
     "api",
-    "DOM",
-    "流程控制",
     "node",
+    "css",
+    "流程控制",
     "re"
   ]
 }
